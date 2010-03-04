@@ -1,1 +1,6 @@
-A sinatra template meant for a more complex app, with datamapper and basic authentication system.
+Sinatra Template
+
+A sinatra application template geared towards a more complex app. Datamapper already configured for basic use. 
+Logging and basic a basic authentication system are also included in the template.
+
+Feel free to fork it, clone it, modify it, etc.
