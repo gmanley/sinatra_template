@@ -27,9 +27,8 @@ namespace :db do
   task :add_users do
     #Example
     as = User.new
-    as.purl_name = "admin"
-    as.login = "admin"
-    as.password = "C2h4hbxQ7J"
+    as.login = "user"
+    as.password = "password"
     as.save
   end
 end
