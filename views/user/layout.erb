@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>User</title>
+    <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="/css/login.css" type="text/css" rel="stylesheet" />
+</head>
+  <div="body">
+    <div class="content">
+      <div="header">
+        <h1> Login To Access the Admin Panel </h1>
+      </div>
+      <div="menu">
+        <ul>
+          <li>
+            <%= link_to 'Login', '/user/login', {:condition => logged_in?, :location => '/user/logout', :name => 'Logout'} %>    
+          </li>
+        </ul>
+      </div>
+      <hr/>
+      <%= show_flash %>
+      <div="container">
+        <%= yield %> 
+      </div>     
+    </div>
+  </div>
+</html>

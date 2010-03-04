@@ -1,0 +1,9 @@
+development:
+  user: user
+  password: password
+  adapter: mysql
+  host: localhost
+  database: some_database
+test:
+  adapter: sqlite3
+  database: spec/test.sqlite3
