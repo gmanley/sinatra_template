@@ -1,36 +1,26 @@
-require 'rubygems'
-require "rake"
-require "rake/clean"
-require 'dm-core'
-require 'sinatra'
-
-task :default  => :spec
-
-require Pathname(Sinatra::Application.root)/"models"/"user"
+require "rubygems"
+require "bundler"
+Bundler.setup
 
 namespace :log do
   desc "clear log files"
   task :clear do
-    Dir.glob(File.join(File.dirname(__FILE__), 'log', '*.log')){ |file| File.open(file, "w") { |file| file << "" }}
+    Dir["log/*.log"].each do |log_file|
+      f = File.open(log_file, "w")
+      f.close
+    end
   end
 end
 
-namespace :db do
-  require 'config/database'
-
-  desc "Migrate the database"
-  task :migrate do
-    User.auto_migrate!
-  end
-
-  desc "Add new users"
-  task :add_users do
-    #Example
-    as = User.new
-    as.login = "user"
-    as.password = "password"
-    as.save
+namespace :prepare do
+  desc "Minify css and js."
+  task :min do
+    require "yui/compressor"
+    js = File.read(File.dirname(__FILE__) + "/public/js/main.js")
+    css = File.read(File.dirname(__FILE__) + "/public/css/style.css")
+    js_minified = YUI::JavaScriptCompressor.new(:munge => true).compress(js)
+    css_minified = YUI::CssCompressor.new.compress(css)
+    File.open(File.dirname(__FILE__) + "/public/js/main.min.js", 'w') {|f| f.write(js_minified)}
+    File.open(File.dirname(__FILE__) + "/public/css/style.min.css", 'w') {|f| f.write(css_minified)}
   end
 end
-
-

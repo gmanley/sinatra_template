@@ -1,0 +1,14 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}/
+    %title Sinatra Template
+    %meta{:name => "description", :content => "A Sinatra template."}/
+    %link{:href => "/css/style.css", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    #wrapper
+      %h1 Sinatra Template
+      #content
+        = yield
+    %script{:src => "/js/main.js", :type => "text/javascript"}

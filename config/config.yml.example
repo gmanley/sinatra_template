@@ -1,0 +1,7 @@
+# Options can be set here that can be retrevied
+# anywhere in the app using the APP_CONFIG hash ie.
+# puts APP_CONFIG["option"]["sub_option1"] #=> example value1
+
+option:
+  sub_option1: example value1
+  sub_option2: example value2

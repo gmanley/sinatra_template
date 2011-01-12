@@ -1,6 +1,0 @@
-Sinatra Template
-
-A Sinatra template geared towards the creation of more complex applications. Datamapper comes already configured for basic use. 
-Logging and a basic authentication system are also included in the template.
-
-Feel free to fork it, clone it or otherwise modify it for your own use.

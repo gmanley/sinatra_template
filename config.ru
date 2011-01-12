@@ -1,16 +1,15 @@
-require 'rubygems'
-require 'application'
-root_dir = File.dirname(__FILE__)
+require "rubygems"
+# Requiring sinatra/base gives us more
+# flexibility and makes it easier to use this app in others
+# (see http://www.sinatrarb.com/extensions.html)
+require "sinatra/base"
 
-set :root,  root_dir
-set :app_file, File.join(root_dir, 'application.rb')
-disable :run
+# Setup bundler to be used in the app.
+require "bundler/setup"
+# Require all the enviroment in-specific gems and
+# the gems for your current enviroment.
+Bundler.require(:default, ENV["RACK_ENV"])
 
-use Rack::Reloader
-
-FileUtils.mkdir_p File.join(root_dir, 'log') unless File.exists?('log')
-log = File.new(File.join(root_dir, 'log', "#{Sinatra::Application.environment}.log"), "a")
-$stdout.reopen(log)
-$stderr.reopen(log)
-
-run Sinatra::Application
+require "app"
+# Change 'SinatraTemplate' to the name you set in app.rb
+run SinatraTemplate::App

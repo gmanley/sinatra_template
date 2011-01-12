@@ -1,5 +1,8 @@
-#!/usr/bin/env ruby -wKU
-file = File.join(File.dirname(__FILE__), "app_loader")
+#!/usr/bin/env ruby
+require "rubygems"
+require "bundler/setup"
+
+file = File.dirname(__FILE__) + '/app_loader'
 libs = "-r #{file}"
 ENV["RACK_ENV"] = ARGV.last
-exec("irb -r irb/completion #{libs} --simple-prompt")
+Kernel.exec("irb -r irb/completion #{libs} --simple-prompt")

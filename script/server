@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+begin
+  exec("shotgun -s thin")
+rescue Errno::ENOENT => e
+  if e.message =~ /No such file or directory/
+    $stdout.puts "Shotgun executable not found, please run bundle install and try again."
+    exit(1)
+  else
+    raise e
+  end
+end

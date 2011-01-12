@@ -1,5 +1,0 @@
-require 'rubygems'
-require 'dm-core'
-require 'models/user'
-
-DataMapper.setup(:default, 'mysql://localhost/example')
