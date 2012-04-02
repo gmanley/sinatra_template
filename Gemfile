@@ -9,7 +9,7 @@ gem 'haml'
 gem 'rake'
 gem 'rack-flash', git: 'git://github.com/gmanley/rack-flash.git'
 gem 'rack-test', require: false
-gem 'pry', git: 'git://github.com/pry/pry.git', require: false
+gem 'pry', git: 'git://github.com/pry/pry.git'
 
 group :development do
   gem 'heroku'
