@@ -4,14 +4,12 @@ gem 'sinatra', require: 'sinatra/base', git: 'git://github.com/sinatra/sinatra.g
 
 gem 'mongoid', '~> 2.4'
 gem 'bson_ext'
-gem 'mongoid_slug'
 
 gem 'haml'
-gem 'json'
 gem 'rake'
 gem 'rack-flash', git: 'git://github.com/gmanley/rack-flash.git'
 gem 'rack-test', require: false
-gem 'pry', git: 'git://github.com/pry/pry.git'
+gem 'pry', git: 'git://github.com/pry/pry.git', require: false
 
 group :development do
   gem 'heroku'
@@ -29,5 +27,4 @@ end
 group :development, :test do
   gem 'faker'
   gem 'fabrication'
-  gem 'rack-test', require: 'rack/test'
 end

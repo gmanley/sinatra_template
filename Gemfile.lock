@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: git://github.com/pry/pry.git
-  revision: 9bf587f2341cc5d677df166eebd83551130d71a4
+  revision: 95a8f4aaf6c2a5fc2e81d183ed68718dce39f664
   specs:
     pry (0.9.8.4)
       coderay (~> 1.0.5)
@@ -75,7 +75,6 @@ GEM
       rest-client (~> 1.6.1)
       rubyzip
     i18n (0.6.0)
-    json (1.6.6)
     launchy (2.1.0)
       addressable (~> 2.2.6)
     method_source (0.7.1)
@@ -86,9 +85,6 @@ GEM
       activemodel (~> 3.1)
       mongo (~> 1.3)
       tzinfo (~> 0.3.22)
-    mongoid_slug (0.10.0)
-      mongoid (~> 2.0)
-      stringex (~> 1.3)
     multi_json (1.2.0)
     netrc (0.7.1)
     nokogiri (1.5.2)
@@ -115,7 +111,6 @@ GEM
       multi_json (~> 1.0)
       rubyzip
     slop (2.4.4)
-    stringex (1.3.2)
     thin (1.3.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -136,10 +131,8 @@ DEPENDENCIES
   faker
   haml
   heroku
-  json
   launchy
   mongoid (~> 2.4)
-  mongoid_slug
   pry!
   rack-flash!
   rack-test
