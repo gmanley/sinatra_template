@@ -1,6 +1,7 @@
 APP_ROOT = File.expand_path('../..', __FILE__)
 ENV['RACK_ENV'] = 'test'
 
+require 'rack/test'
 require File.join(APP_ROOT, 'lib/boot')
 def app; App end
 
