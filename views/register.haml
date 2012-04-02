@@ -1,0 +1,13 @@
+- block_message(:error, 'Please correct the following issues and resubmit the form.', @user.errors.full_messages) if @user and !@user.errors.empty?
+%form.form-stacked#register{action: '/user/new', method: 'post'}
+  %fieldset
+    %legend Register
+    %fieldset
+      %label{for: 'email'} Email
+      %input.input-large{placeholder: 'Email', type: 'text', name: 'email'}
+      %label{for: 'password'} Password
+      %input.input-large{placeholder: 'Password', type: 'password', name: 'password'}
+      %label{for: 'password_confirmation'} Password Confirmation
+      %input.input-large{placeholder: 'Password Confirmation', type: 'password', name: 'password_confirmation'}
+  .actions
+    %button.btn{type: 'submit'} Sign Up

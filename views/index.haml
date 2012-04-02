@@ -1,1 +1,6 @@
-%h1 Edit me in 'views/index.haml'
+- if logged_in?
+  %span#access_notice S3 Upload
+- else
+  %span#access_notice
+    Please sign in or
+    %a{:href => "/user/new"} register!

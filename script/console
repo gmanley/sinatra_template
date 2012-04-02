@@ -1,8 +1,3 @@
 #!/usr/bin/env ruby
-require "rubygems"
-require "bundler/setup"
 
-file = File.dirname(__FILE__) + '/app_loader'
-libs = "-r #{file}"
-ENV["RACK_ENV"] = ARGV.last
-Kernel.exec("irb -r irb/completion #{libs} --simple-prompt")
+require File.expand_path('../app_loader', __FILE__)

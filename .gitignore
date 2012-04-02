@@ -1,8 +1,6 @@
-*.db
-*.sqlite3
-.bundle
 .DS_Store
-config/config.yml
-config/database.yml
 log/*
 tmp/*
+config/config.yml
+.bundle
+*.rbc

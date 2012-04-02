@@ -1,1 +1,3 @@
-// Javascipt here
+$(function() {
+ // Document ready
+});

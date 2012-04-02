@@ -1,31 +1,22 @@
-require "rubygems"
-require "rspec"
-require "rack/test"
-require "sinatra"
+APP_ROOT = File.expand_path('../..', __FILE__)
+ENV['RACK_ENV'] = 'test'
 
-include Rack::Test::Methods
+require File.join(APP_ROOT, 'lib/boot')
+def app; App end
 
-set :views => File.join(File.dirname(__FILE__), "..", "views"),
-    :public => File.join(File.dirname(__FILE__), "..", "public")
+RSpec.configure do |config|
+  config.include Rack::Test::Methods
 
-set :environment, :test
-set :reload_templates, true
-
-require File.join(File.dirname(__FILE__), "..", "init")
-
-module TestHelper
-  def app
-    App.new
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.orm = 'mongoid'
   end
 
-  def body
-    last_response.body
+  config.before(:each) do
+    DatabaseCleaner.start
   end
 
-  def status
-    last_response.status
+  config.after(:each) do
+    DatabaseCleaner.clean
   end
-
-  include Rack::Test::Methods
-
 end
