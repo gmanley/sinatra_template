@@ -28,7 +28,7 @@ feature 'Registration' do
       click_button('Sign Up')
     end
 
-    errors.should have_content('Password and confirmation does not match')
+    errors.should have_content("Password doesn't match confirmation")
     errors.should have_content("Email can't be blank")
     errors.should have_content('Email is invalid')
   end
