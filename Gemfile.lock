@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/gmanley/rack-flash.git
-  revision: d8fd1d2c0b176d04bcb904a22cd84debe85f2061
-  specs:
-    rack-flash (0.1.2)
-      rack
-
-GIT
   remote: git://github.com/gmanley/sinatra-contrib.git
   revision: f7e3e01d6868818aeb8f891ac1f450982c273df3
   specs:
@@ -19,16 +12,16 @@ GIT
 
 GIT
   remote: git://github.com/pry/pry.git
-  revision: 95a8f4aaf6c2a5fc2e81d183ed68718dce39f664
+  revision: c12f7c0e67a48882a9ffb41588f16993490a7ca4
   specs:
-    pry (0.9.8.4)
+    pry (0.10.pre.1)
       coderay (~> 1.0.5)
-      method_source (~> 0.7.1)
-      slop (>= 2.4.4, < 3)
+      method_source (~> 0.8)
+      slop (~> 3.3.1)
 
 GIT
   remote: git://github.com/sinatra/sinatra.git
-  revision: ebd197d2afc8341d4b93417bd9d7cba8a15ba4a6
+  revision: 762967f8aa330429132ec5cfdb623f5eac316091
   specs:
     sinatra (1.4.0)
       rack (~> 1.3, >= 1.3.6)
@@ -38,17 +31,17 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    activemodel (3.2.3)
-      activesupport (= 3.2.3)
+    activemodel (3.2.6)
+      activesupport (= 3.2.6)
       builder (~> 3.0.0)
-    activesupport (3.2.3)
+    activesupport (3.2.6)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    addressable (2.2.7)
-    backports (2.5.1)
-    bson (1.6.1)
-    bson_ext (1.6.1)
-      bson (~> 1.6.1)
+    addressable (2.2.8)
+    backports (2.6.1)
+    bson (1.6.4)
+    bson_ext (1.6.4)
+      bson (~> 1.6.4)
     builder (3.0.0)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -57,38 +50,47 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
-    childprocess (0.3.1)
+    childprocess (0.3.3)
       ffi (~> 1.0.6)
-    coderay (1.0.5)
+    coderay (1.0.7)
     daemons (1.1.8)
-    database_cleaner (0.7.2)
+    database_cleaner (0.8.0)
     diff-lcs (1.1.3)
     eventmachine (0.12.10)
-    fabrication (1.3.2)
+    excon (0.14.3)
+    fabrication (2.1.0)
     faker (1.0.1)
       i18n (~> 0.4)
     ffi (1.0.11)
-    haml (3.1.4)
-    heroku (2.23.0)
+    haml (3.1.6)
+    heroku (2.28.12)
+      heroku-api (~> 0.2.8)
       launchy (>= 0.3.2)
-      netrc (~> 0.7.1)
+      netrc (~> 0.7.5)
       rest-client (~> 1.6.1)
       rubyzip
+    heroku-api (0.2.8)
+      excon (~> 0.14.3)
     i18n (0.6.0)
     launchy (2.1.0)
       addressable (~> 2.2.6)
-    method_source (0.7.1)
-    mime-types (1.18)
-    mongo (1.6.1)
-      bson (~> 1.6.1)
-    mongoid (2.4.7)
+    libwebsocket (0.1.4)
+      addressable
+    method_source (0.8)
+    mime-types (1.19)
+    mongo (1.6.2)
+      bson (~> 1.6.2)
+    mongoid (2.4.12)
       activemodel (~> 3.1)
-      mongo (~> 1.3)
+      mongo (<= 1.6.2)
       tzinfo (~> 0.3.22)
-    multi_json (1.2.0)
-    netrc (0.7.1)
-    nokogiri (1.5.2)
+    multi_json (1.3.6)
+    netrc (0.7.5)
+    nokogiri (1.5.5)
     rack (1.4.1)
+    rack-flash3 (1.0.1)
+      rack
+      rack
     rack-protection (1.2.0)
       rack
     rack-test (0.6.1)
@@ -96,27 +98,27 @@ GEM
     rake (0.9.2.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    rspec (2.9.0)
-      rspec-core (~> 2.9.0)
-      rspec-expectations (~> 2.9.0)
-      rspec-mocks (~> 2.9.0)
-    rspec-core (2.9.0)
-    rspec-expectations (2.9.0)
+    rspec (2.11.0)
+      rspec-core (~> 2.11.0)
+      rspec-expectations (~> 2.11.0)
+      rspec-mocks (~> 2.11.0)
+    rspec-core (2.11.0)
+    rspec-expectations (2.11.1)
       diff-lcs (~> 1.1.3)
-    rspec-mocks (2.9.0)
-    rubyzip (0.9.6.1)
-    selenium-webdriver (2.20.0)
+    rspec-mocks (2.11.1)
+    rubyzip (0.9.9)
+    selenium-webdriver (2.24.0)
       childprocess (>= 0.2.5)
-      ffi (~> 1.0)
+      libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
-    slop (2.4.4)
-    thin (1.3.1)
+    slop (3.3.2)
+    thin (1.4.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
     tilt (1.3.3)
-    tzinfo (0.3.32)
+    tzinfo (0.3.33)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -134,7 +136,7 @@ DEPENDENCIES
   launchy
   mongoid (~> 2.4)
   pry!
-  rack-flash!
+  rack-flash3
   rack-test
   rake
   rspec

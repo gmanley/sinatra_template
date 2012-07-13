@@ -5,7 +5,7 @@ feature 'Registration' do
   let(:user) { Fabricate.build(:user) }
   let(:errors) { find('.alert-block ul') }
 
-  scenario "successfully registering a new account with valid data" do
+  scenario 'successfully registering a new account with valid data' do
     visit('/user/new')
 
     within('#register') do
@@ -18,7 +18,7 @@ feature 'Registration' do
     find('#user_dropdown .dropdown-toggle').should have_content(user.email)
   end
 
-  scenario "display errors when attempting to register a new account with invalid information" do
+  scenario 'display errors when attempting to register a new account with invalid information' do
     visit('/user/new')
 
     within('#register') do

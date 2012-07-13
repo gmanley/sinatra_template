@@ -1,6 +1,5 @@
 .DS_Store
-log/*
-tmp/*
+log
+tmp
 config/config.yml
 .bundle
-*.rbc

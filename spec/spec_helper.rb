@@ -1,8 +1,7 @@
-APP_ROOT = File.expand_path('../..', __FILE__)
 ENV['RACK_ENV'] = 'test'
 
 require 'rack/test'
-require File.join(APP_ROOT, 'lib/boot')
+require File.expand_path('../../lib/boot', __FILE__)
 def app; App end
 
 RSpec.configure do |config|

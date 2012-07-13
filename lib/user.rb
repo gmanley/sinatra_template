@@ -8,7 +8,7 @@ class User
   attr_protected :password_hash, :password_salt
   attr_accessor :password, :password_confirmation
 
-  field :email, type: String
+  field :email,         type: String
   field :password_hash, type: String
   field :password_salt, type: String
 
@@ -20,17 +20,17 @@ class User
                        confirmation: true
 
   validates :email, presence: true,
-                    :uniqueness => {case_sensitive: false},
-                    format: {with: EMAIL_REGEX}
+                    uniqueness: { case_sensitive: false },
+                    format: { with: EMAIL_REGEX }
 
 
   def self.authenticate(email, password)
-    user = first(conditions: {email: email})
+    user = first(conditions: { email: email })
     return user if user and user.matching_password?(password)
   end
 
   def matching_password?(pass)
-    self.password_hash == encrypt_password(pass)
+    password_hash == encrypt_password(pass)
   end
 
   private

@@ -6,7 +6,7 @@ RSpec.configure do |config|
 end
 
 Capybara.configure do |config|
-  config.save_and_open_page_path = File.join(APP_ROOT, 'tmp/capybara')
+  config.save_and_open_page_path = APP_ROOT.join('tmp/capybara')
   config.app = App
-  config.asset_root = Pathname(File.join(APP_ROOT, 'public'))
+  config.asset_root = APP_ROOT.join('public')
 end

@@ -1,5 +1,5 @@
 class App < Sinatra::Base
-  extend Settings
+  register Sinatra::Setup
 
   configure(:development) do |c|
     register Sinatra::Reloader
@@ -23,11 +23,11 @@ class App < Sinatra::Base
 
   post '/user/login' do
     if user = User.authenticate(params[:email], params[:password])
-      flash[:notice] = "Logged in successfully"
+      flash[:notice] = 'Logged in successfully'
       session[:user_id] = user.id.to_s
       redirect '/'
     else
-      flash[:notice] = "Incorrect credentials"
+      flash[:notice] = 'Incorrect credentials'
       redirect '/'
     end
   end
@@ -39,7 +39,7 @@ class App < Sinatra::Base
   post '/user/new' do
     @user = User.create(params)
     if @user.valid?
-      flash[:notice] = "Registered successfully!"
+      flash[:notice] = 'Registered successfully!'
       session[:user_id] = @user.id.to_s
       redirect '/'
     else

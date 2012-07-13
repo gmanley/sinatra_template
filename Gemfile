@@ -7,7 +7,7 @@ gem 'bson_ext'
 
 gem 'haml'
 gem 'rake'
-gem 'rack-flash', git: 'git://github.com/gmanley/rack-flash.git'
+gem 'rack-flash3', require: 'rack/flash'
 gem 'rack-test', require: false
 gem 'pry', git: 'git://github.com/pry/pry.git'
 

@@ -1,7 +1,7 @@
 .navbar.navbar-fixed-top
   .navbar-inner
     .container
-      %a.brand{:href => "#"}= App.config.site_title
+      %a.brand{href: '#'}= App.config.site_title
       - if logged_in?
         %ul.nav.pull-right
           %li.dropdown#user_dropdown
@@ -10,13 +10,13 @@
               %b.caret
             %ul.dropdown-menu
               %li
-                %a{:href => "#"} My Profile
+                %a{href: '#'} My Profile
               %li.divider
               %li
-                %a{:href => "/user/logout"} Logout
+                %a{href: '/user/logout'} Logout
       - else
-        %form#login.pull-right.navbar-form{:action => "/user/login", :method => "post"}
-          %input.input-small{:placeholder => "Email", :type => "text", :name => "email"}
-          %input.input-small{:placeholder => "Password", :type => "password", :name => "password"}
-          %button.btn.btn-primary{:type => 'submit'} Sign In
-          %a#register-link.btn{:href => '/user/new'} Sign Up
+        %form#login.pull-right.navbar-form{action: '/user/login', method: 'post'}
+          %input.input-small{placeholder: 'Email', type: 'text', name: 'email'}
+          %input.input-small{placeholder: 'Password', type: 'password', name: 'password'}
+          %button.btn.btn-primary{type: 'submit'} Sign In
+          %a#register-link.btn{href: '/user/new'} Sign Up

@@ -3,13 +3,23 @@
 # SecureRandom.hex(64) # => random_string
 session_secret: random_string
 site_title: My App
+
 database:
+  shared: &shared_settings
+    identity_map_enabled: true
+
   production:
+    <<: *shared_settings
     host: localhost
     database: my_app_production
+
   development:
+    <<: *shared_settings
     host: localhost
     database: my_app_development
+
   test:
+    <<: *shared_settings
     host: localhost
     database: my_app_test
+    logger: false
