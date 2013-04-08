@@ -1,7 +1,5 @@
-require 'bundler/setup'
-require 'yaml'
+require File.expand_path('../lib/boot', __FILE__)
 
-$:.unshift('.').uniq!
 ENV['RACK_ENV'] ||= 'development'
 
 namespace :log do
