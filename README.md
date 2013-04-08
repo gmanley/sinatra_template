@@ -1,11 +1,14 @@
 Sinatra Template
 ================
 
-My base Sinatra template, with support for active_record or mongoid (Checkout the other branches).
+My base Sinatra template, with support for ActiveRecord.
+For Mongoid support checkout the corresponding branch.
 
-* Clone it
-* Rename 'config/config.yml.example'
-* `bundle install`
+* Clone the repository
+* Rename 'config/config.yml.example' & edit config as needed.
+* `bundle`
+* Create databases
+* rake db:migrate
 * `script/server` to start the development server.
 * `script/console` to start console
 * `RACK_ENV=test rake db:migrate spec` to run tests
@@ -16,12 +19,12 @@ Includes a basic authentication system.
 
 Setup with:
 ------
-* Mongoid or ActiveRecord
+* ActiveRecord or Mongoid
 * HAML
 * Twitter Bootstrap
 
 __Requirements:__
 
 * Ruby (>= 1.9.2)
-* MongoDB or any active_record supported db
+* Any ActiveRecord supported db or MongoDB
 * Bundler
