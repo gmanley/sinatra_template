@@ -10,6 +10,7 @@ gem 'rack-flash3', require: 'rack/flash'
 gem 'rack-test', require: false
 gem 'pry'
 gem 'thin'
+gem 'rake'
 
 group :development do
   gem 'heroku'
