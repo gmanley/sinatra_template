@@ -25,8 +25,8 @@ class User
 
 
   def self.authenticate(email, password)
-    user = first(conditions: { email: email })
-    return user if user and user.matching_password?(password)
+    user = where(email: email).first
+    user if user and user.matching_password?(password)
   end
 
   def matching_password?(pass)

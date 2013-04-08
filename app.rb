@@ -1,21 +1,5 @@
 class App < Sinatra::Base
-  register Sinatra::Setup
-
-  configure(:development) do |c|
-    register Sinatra::Reloader
-    c.also_reload('lib/**/*.rb')
-  end
-
-  configure do
-    set :root, APP_ROOT
-    set :haml, {format: :html5}
-
-    enable(:sessions)
-    set :session_secret, config.session_secret
-    use Rack::Flash, sweep: true
-  end
-
-  helpers(ApplicationHelper)
+  register Boot
 
   get '/' do
     haml :index

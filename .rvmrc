@@ -1,8 +1,1 @@
-# Use the ruby 1.9.3 & the sinatra_template gemset
-# If they don't exsist build/create them first
-rvm 1.9.3@sinatra_template --create --install
-# Install bundler if it isn't installed
-if ! command -v bundle >/dev/null 2>&1 ; then
-    echo "Installing bundler gem"
-    gem install bundler
-fi
+rvm 2.0.0@sinatra_template --create
