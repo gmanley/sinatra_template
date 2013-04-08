@@ -37,7 +37,7 @@ module Boot
     initializers.each { |initializer| initializer.call(app) }
   end
 
-  include SetupMongoid
+  include SetupActiveRecord
   include SetupAirbrake
 end
 

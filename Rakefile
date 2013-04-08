@@ -1,4 +1,5 @@
 require File.expand_path('../lib/boot', __FILE__)
+require 'sinatra/activerecord/rake'
 
 ENV['RACK_ENV'] ||= 'development'
 

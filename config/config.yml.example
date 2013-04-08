@@ -5,27 +5,14 @@ session_secret: random_string
 site_title: My App
 
 database:
-  test:
-    sessions:
-      default:
-        database: my_app_test
-        hosts:
-          - localhost:27017
+  production:
+    adapter: postgresql
+    database: sinatra_production
 
   development:
-    sessions:
-      default:
-        database: my_app_development
-        hosts:
-          - localhost:27017
-    options:
-      identity_map_enabled: true
+    adapter: postgresql
+    database: sinatra_development
 
-  production:
-    sessions:
-      default:
-        database: my_app_production
-        hosts:
-          - localhost:27017
-    options:
-      identity_map_enabled: true
+  test:
+    adapter: postgresql
+    database: sinatra_test

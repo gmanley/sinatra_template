@@ -2,8 +2,10 @@ source 'https://rubygems.org'
 
 gem 'sinatra', github: 'sinatra/sinatra', require: 'sinatra/base'
 
-gem 'mongoid'
-gem 'bson_ext'
+gem 'activerecord', '~> 3.2'
+gem 'sinatra-activerecord'
+gem 'pg'
+gem 'bcrypt-ruby'
 
 gem 'haml'
 gem 'rack-flash3', require: 'rack/flash'
