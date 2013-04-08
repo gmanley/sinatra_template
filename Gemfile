@@ -4,6 +4,7 @@ gem 'sinatra', github: 'sinatra/sinatra', require: 'sinatra/base'
 
 gem 'mongoid'
 gem 'bson_ext'
+gem 'bcrypt-ruby'
 
 gem 'haml'
 gem 'rack-flash3', require: 'rack/flash'

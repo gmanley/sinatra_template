@@ -30,6 +30,7 @@ GEM
       multi_json (~> 1.0)
     addressable (2.3.3)
     backports (3.3.0)
+    bcrypt-ruby (3.0.1)
     bson (1.8.4)
     bson_ext (1.8.4)
       bson (~> 1.8.4)
@@ -122,6 +123,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   bson_ext
   capybara
   database_cleaner
